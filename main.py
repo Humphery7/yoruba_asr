@@ -19,7 +19,7 @@ col1, col2= st.columns(2)
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 pipe = pipeline(task='automatic-speech-recognition',
-                model='Humphery7/yoruba_asr',
+                model='Humphery7/asr-yoruba-best-checkpoint',
                 chunk_length_s=30,
                 stride_length_s=(15, 3),
                 device=device)
