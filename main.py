@@ -5,7 +5,6 @@ import librosa
 import io
 from audio_recorder_streamlit import audio_recorder
 
-
 st.markdown(
     """
     <h1 style="text-align: center;">
@@ -45,7 +44,7 @@ with col1:
         st.audio(audio_bytes, format="audio/wav")
         try:
             audio_stream = io.BytesIO(audio_bytes)
-            audio, sample_rate = librosa.load(audio_stream, sr=None, mono=True)
+            audio, sample_rate = librosa.load(audio_stream, sr=16000, mono=True)
 
             # st.write(f"Audio length: {len(audio)} samples")
             # st.write(f"Sample rate: {sample_rate} Hz")
