@@ -1,9 +1,15 @@
+import os
 import torch
 import streamlit as st
 from transformers import pipeline
 import librosa
 import io
 from audio_recorder_streamlit import audio_recorder
+from huggingface_hub import login
+
+TOKEN = os.getenv("TOKEN")
+
+login(token=TOKEN)
 
 st.markdown(
     """
