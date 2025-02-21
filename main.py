@@ -14,7 +14,7 @@ login(token=TOKEN)
 st.markdown(
     """
     <h1 style="text-align: center;">
-        Speech to Text Yoruba Language <span style="color: lightblue;">App</span>
+        Speech to Text Yoruba <span style="color: lightblue;">App</span>
     </h1>
     """,
     unsafe_allow_html=True
