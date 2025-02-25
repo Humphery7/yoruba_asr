@@ -24,8 +24,8 @@ col1, col2= st.columns(2)
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 pipe = pipeline(task='automatic-speech-recognition',
                 model='Humphery7/yoruba-dataaugmentation',
-                chunk_length_s=30,
-                stride_length_s=(15, 3),
+                chunk_length_s=40,
+                stride_length_s=(5, 5),
                 device=device)
 
 pipe.model.config.forced_decoder_ids = pipe.tokenizer.get_decoder_prompt_ids(language="yoruba", task="transcribe")
