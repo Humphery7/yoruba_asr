@@ -28,6 +28,8 @@ pipe = pipeline(task='automatic-speech-recognition',
                 stride_length_s=(15, 3),
                 device=device)
 
+pipe.model.config.forced_decoder_ids = pipe.tokenizer.get_decoder_prompt_ids(language="yoruba", task="transcribe")
+
 samplerate = 16000
 MAX_DURATION = 90
 
